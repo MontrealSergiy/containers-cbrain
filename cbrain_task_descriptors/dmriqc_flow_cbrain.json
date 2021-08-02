@@ -19,12 +19,13 @@
      "inputs": [
        {
            "command-line-flag": "--input",
-           "description": "Input folder containing multiple subjects. Could be Tractoflow input (BIDS or not), Tractoflow output or RBX_flow output",
+           "description": "List of file collections(folders) representing multiple subjects. Could be Tractoflow inputs, Tractoflow output or RBX_flow output",
            "id": "input",
            "name": "input",
            "optional": false,
            "default-value": "true",
-           "type": "String",
+           "list": true,
+           "type": "File",
            "value-key": "[INPUT]"
        },
        {
