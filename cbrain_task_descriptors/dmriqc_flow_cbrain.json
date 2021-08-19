@@ -9,7 +9,7 @@
         "cbrain:readonly-input-files": true,
         "cbrain:author": "Arnaud Boré <arnaud.bore@gmail.com> and Guillaume Theaud <guillaume.theaud@usherbrooke.ca>"
      },
-     "command-line": " mkdir INPUTDATA; mv * INPUTDATA; nextflow run /dmriqc_flow/main.nf INPUTDATA [OUTPUT_DIR] [PROFILE],cbrain",
+     "command-line": " mkdir INPUTDATA; cp * INPUTDATA; nextflow run /dmriqc_flow/main.nf INPUTDATA [OUTPUT_DIR] [PROFILE],cbrain",
      "container-image":
      {
          "image": "scilus/cbrain-dmriqcflow:test",
@@ -29,6 +29,17 @@
            "value-key": "[INPUT]"
        },
        {
+           "command-line-flag": "--output_dir",
+           "description": "The pipiline results are stored in this folder",
+           "id": "output",
+           "name": "Results",
+           "optional": false,
+           "default-value": "QCresults",
+           "list": true,
+           "type": "File",
+           "value-key": "[OUTPUT]"
+       },  
+       {
            "command-line-flag": "--profile",
            "description": "Profile.",
            "id": "profile",
@@ -43,8 +54,7 @@
              "tractoflow_qc_all",
              "rbx_flow"
            ]
-       }
-     }
+       }     
  ],
  "output-files" : [
      {
