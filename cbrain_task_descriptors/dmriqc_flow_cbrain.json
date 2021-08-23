@@ -9,7 +9,7 @@
         "cbrain:readonly-input-files": true,
         "cbrain:author": "Arnaud Boré <arnaud.bore@gmail.com> and Guillaume Theaud <guillaume.theaud@usherbrooke.ca>"
      },
-     "command-line": " mkdir INPUTDATA; cp -P -t INPUTDATA [INPUT]; nextflow run /dmriqc_flow/main.nf INPUTDATA [OUTPUT_DIR] [PROFILE],cbrain",
+     "command-line": " mkdir INPUTDATA; cp -P -t INPUTDATA [INPUT]; nextflow run /dmriqc_flow/main.nf --root INPUTDATA [OUTPUT_DIR] [PROFILE]",
      "container-image":
      {
          "image": "scilus/cbrain-dmriqcflow:test",
@@ -17,8 +17,7 @@
          "type": "singularity"
      },
      "inputs": [
-       {
-           "command-line-flag": "--root",
+       {           
            "description": "List of file collections(folders) representing multiple subjects. Could be Tractoflow inputs, Tractoflow output or RBX_flow output",
            "id": "input",
            "name": "input",
