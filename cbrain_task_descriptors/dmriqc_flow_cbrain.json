@@ -30,14 +30,14 @@
        },
        {
            "command-line-flag": "--output_dir",
-           "description": "The pipiline results are stored in this folder",
+           "description": "The results obtained by running this pipeline will be stored in this folder",
            "id": "output",
            "name": "Results",
            "optional": false,
            "default-value": "QCresults",
            "list": true,
-           "type": "File",
-           "value-key": "[OUTPUT]"
+           "type": "String",
+           "value-key": "[OUTPUT_DIR]"
        },  
        {
            "command-line-flag": "--profile",
