@@ -40,7 +40,7 @@
            "value-key": "[OUTPUT_DIR]"
        },  
        {
-           "command-line-flag": "--profile",
+           "command-line-flag": "-profile",
            "description": "Profile.",
            "id": "profile",
            "name": "profile",
