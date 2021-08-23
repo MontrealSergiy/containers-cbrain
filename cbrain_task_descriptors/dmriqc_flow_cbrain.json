@@ -18,7 +18,7 @@
      },
      "inputs": [
        {
-           "command-line-flag": "--input",
+           "command-line-flag": "--root",
            "description": "List of file collections(folders) representing multiple subjects. Could be Tractoflow inputs, Tractoflow output or RBX_flow output",
            "id": "input",
            "name": "input",
