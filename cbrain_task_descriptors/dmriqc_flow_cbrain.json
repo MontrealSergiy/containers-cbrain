@@ -9,7 +9,7 @@
         "cbrain:readonly-input-files": true,
         "cbrain:author": "Arnaud Boré <arnaud.bore@gmail.com> and Guillaume Theaud <guillaume.theaud@usherbrooke.ca>"
      },
-     "command-line": " mkdir -p INPUTDATA;  cp --symbolic-link $PWD/{[INPUT]}/sub-* INPUTDIR -r; nextflow run /dmriqc_flow/main.nf --root INPUTDATA [OUTPUT_DIR] [PROFILE]",
+     "command-line": " mkdir -p INPUTDATA;  cp --symbolic-link $PWD/{[INPUT]}/sub-* INPUTDATA -r; nextflow run /dmriqc_flow/main.nf --root INPUTDATA [OUTPUT_DIR] [PROFILE]",
      "container-image":
      {
          "image": "scilus/cbrain-dmriqcflow:test",
